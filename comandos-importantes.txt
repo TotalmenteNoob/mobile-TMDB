@@ -44,3 +44,16 @@ Vai precisar toda aula:
           		<Stack.Screen name="profile" component={ProfileScreen}/>
         	</Stack.Navigator>
       	</NavigationContainer>
+
+Para trazer os dados da API: useState e useEffect
+	const [filmes, setFilmes] = useState({})
+
+    	useEffect(()=> {
+        	apiFilmes.get('/movie/popular').then(resultado => setFilmes(resultado.data.results))
+    	})
+
+Para navegar entre as páginas:
+	1 - colocar o (navigation)
+		const FilmesPopulares = ({navigation}) => {
+	2 - Chamar o navigation.push
+		onPress={()=>navigation.push('filmes-detalhes',{id: item.id})}
