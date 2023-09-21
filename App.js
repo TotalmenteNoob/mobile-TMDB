@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import FilmesPopulares from './screens/filmes/FilmesPopulares';
 import { PaperProvider } from 'react-native-paper';
 import FilmesDetalhes from './screens/filmes/FilmesDetalhes';
+import AtoresDetalhes from './screens/filmes/AtoresDetalhes';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export default function App() {
           <Stack.Navigator>
             <Stack.Screen name="filmes-populares" component={FilmesPopulares} options={{title: "Filmes Populares"}} />
             <Stack.Screen name="filmes-detalhes" component={FilmesDetalhes} options={{title: "Filmes Detalhes"}} />
+            <Stack.Screen name="atores-detalhes" component={AtoresDetalhes} options={{title: "Atores Detalhes"}} />
           </Stack.Navigator>
         </NavigationContainer>
       </PaperProvider>
