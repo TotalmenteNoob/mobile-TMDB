@@ -62,6 +62,9 @@ Para instalar o bottom navigator do Navigator
 	$ npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
 
 Para quando precisar do stack screen do navigator
+
+	const Stack = createNativeStackNavigator(); //essa linha fica acima do export
+
 	<NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen name="filmes-populares" component={FilmesPopulares} options={{title: "Filmes Populares"}} />
