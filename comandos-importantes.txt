@@ -57,3 +57,16 @@ Para navegar entre as páginas:
 		const FilmesPopulares = ({navigation}) => {
 	2 - Chamar o navigation.push
 		onPress={()=>navigation.push('filmes-detalhes',{id: item.id})}
+
+Para instalar o bottom navigator do Navigator
+	$ npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
+
+Para quando precisar do stack screen do navigator
+	<NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="filmes-populares" component={FilmesPopulares} options={{title: "Filmes Populares"}} />
+            <Stack.Screen name="filmes-detalhes" component={FilmesDetalhes} options={{title: "Filmes Detalhes"}} />
+            <Stack.Screen name="atores-detalhes" component={AtoresDetalhes} options={{title: "Atores Detalhes"}} />
+          </Stack.Navigator>
+        </NavigationContainer>
+
